@@ -1,1 +1,1 @@
-IdeaProjects
+Idea
