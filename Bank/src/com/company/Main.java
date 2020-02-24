@@ -16,7 +16,33 @@ class Bank {
     void isDevidable(int a, int b, int c, int d) {
         Scanner scan = new Scanner(System.in);
         Sum = scan.nextInt();
-        
+        int arr[] = new int[4];
+
+        if (Sum > (a*1000 + b*500 + c*100 + d*30)|| (Sum % 10 != 0)) {
+            System.out.print("Невозможно выдать данную сумму.\n");
+        } else {
+            while (Sum % 100 != 0 && Sum > 0 && d > 0) {
+                Sum -= 30;
+                arr[3]++;
+            }
+            while (a > 0 && Sum - 1000 >= 0) {
+                Sum -= 1000;
+                arr[0]++;
+            }
+            while (b > 0 && Sum - 500 >= 0) {
+                Sum -= 500;
+                arr[1]++;
+            }
+            while (c > 0 && Sum - 100 >= 0) {
+                Sum -= 100;
+                arr[2]++;
+            }
+            if (Sum == 0) {
+                System.out.println("1000: " + arr[0] + "\t" + "500: " + arr[1] + "\t" + "\n"
+                        + "100: " + arr[2] + "\t\t" + "30:" + arr[3] + "\t");
+            }
+            else System.out.println("Низя");
+        }
 
 
 
