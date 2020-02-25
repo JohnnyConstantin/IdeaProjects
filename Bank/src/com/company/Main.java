@@ -127,17 +127,18 @@ class Bank {
 
 public class Main {
     public static void main(String[] args) {
-        int a = 1, b = 1, c = 1, d = 1;
+        int a,b,c,d;
         Bank Bank = new Bank();
 
         System.out.println("Номинал: 1000");
-        Bank.BankQuant(a);
+        Scanner scan = new Scanner(System.in);
+        a = scan.nextInt();
         System.out.println("Номинал: 500");
-        Bank.BankQuant(b);
+        b = scan.nextInt();
         System.out.println("Номинал: 100");
-        Bank.BankQuant(c);
+        c = scan.nextInt();
         System.out.println("Номинал: 30");
-        Bank.BankQuant(d);
+        d = scan.nextInt();
         System.out.println("Введите сумму для снятия");
         Bank.isDevidable(a,b,c,d);
 
