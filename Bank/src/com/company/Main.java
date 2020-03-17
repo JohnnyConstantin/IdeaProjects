@@ -127,11 +127,18 @@ class Bank {
 
 public class Main {
     public static void main(String[] args) {
+<<<<<<< HEAD
         int a,b,c,d;
+=======
+        int a =0,b=0,c=0,d=0;
+>>>>>>> dev
         Bank Bank = new Bank();
-
-        System.out.println("Номинал: 1000");
         Scanner scan = new Scanner(System.in);
+        System.out.println("Номинал: 1000");
+<<<<<<< HEAD
+        Scanner scan = new Scanner(System.in);
+=======
+>>>>>>> dev
         a = scan.nextInt();
         System.out.println("Номинал: 500");
         b = scan.nextInt();
